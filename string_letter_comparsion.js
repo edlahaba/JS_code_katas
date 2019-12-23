@@ -1,14 +1,14 @@
 function testXO(str) {
-    const countLetter = countLetterInSentence(str);
+  const countLetter = countLetterInSentence(str);
 
-    return countLetter('x') == countLetter('o');
+  return countLetter('x') == countLetter('o');
 }
 
 let countLetterInSentence = (sentence) => {
-	const savedSentence = sentence.toLowerCase();
+  const savedSentence = sentence.toLowerCase();
 
-	return (letter) => {
- 		return (savedSentence.match(new RegExp(`${letter}`,'g')) || []).length
+  return (letter) => {
+    return (savedSentence.match(new RegExp(`${letter}`,'g')) || []).length
   };
 }
 
