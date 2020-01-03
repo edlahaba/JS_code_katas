@@ -6,13 +6,13 @@ const Mathematics = {
     return Mathematics.sum(x, y * -1);
   },
   product: function product(x, y) {
-    return Mathematics._calc_(x, y, 0, (x, y, result) => { for (let i = 0; i < y; i++){ result = Mathematics.sum(result, x) }; return result; });
+    return Mathematics._calc_(x, y, 0, (x, y, result) => { for (let i = 0; i < y; i++) { result = Mathematics.sum(result, x) }; return result; });
   },
   divide: function divide(x, y) {
     return Mathematics._calc_(x, y, 0, (x, y, result) => { while (Mathematics.minus(x, y) >= 0) { result++; x = Mathematics.minus(x, y); }; return result; });
   },
   power: function power(x, y) {
-    return Mathematics._calc_(x, y, 1, (x, y, result) => { for (let i = 0; i < y; i++){ result = Mathematics.product(result, x) }; return result; });
+    return Mathematics._calc_(x, y, 1, (x, y, result) => { for (let i = 0; i < y; i++) { result = Mathematics.product(result, x) }; return result; });
   },
   square: function square(x, y = 2) {
     return Mathematics._calc_(x, y, 0, (x, y, result) => { while (x != 1) { result++ ; x = Mathematics.divide(x, y); }; return result; });
