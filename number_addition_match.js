@@ -10,9 +10,9 @@ function getSum(arr, mynumber) {
 
   function filterSumOf(number, index, arr) {
     var addMatch = []
-    arr.forEach(checkPreviousNumbers);
+    arr.forEach(checkNextNumbers);
 
-    function checkPreviousNumbers(lastNumber, lastIndex) {
+    function checkNextNumbers(lastNumber, lastIndex) {
       if(lastIndex <= index) return;
 
       if((number + lastNumber) == mynumber) {
